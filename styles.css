@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: DM Sans;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+header, section, footer {
+    padding: 48px;
+    text-align: left;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    height: auto;
+
+    background: #4E342E;
+    color: #E0E0E0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: Instrument Serif;
+    font-weight: lighter;
+    font-size: 5em;
+    line-height: 0.9;
+    margin: 0;
+}
+
+.hero button {
+    font-family: DM Sans;
+    font-weight: 400;
+    background: #E0E0E0;
+    color: #4E342E;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero button:hover {
+    background: #D7CCC8;
+    color: #424242;
+}
+
+.hero p {
+    margin-top: 24px;
+}
+
+/* Section Styles */
+#section1 {
+    background: linear-gradient(#D7CCC8 90%, #FAFAFA);
+    padding: 48px;
+}
+
+section h2 {
+    font-family: Instrument Serif;
+    font-weight: lighter;
+    font-size: 3em;
+    line-height: 1;
+    color: #424242;
+    margin-left: 24px;
+    margin-bottom: 0px;
+}
+
+section p {
+    color: #424242;
+    margin-left: 24px;
+    max-width: 70%;
+}
+
+#section2 {
+    background: #FAFAFA;
+}
+#section2 h2{
+    color: #4A148C;
+}
+#section2 p{
+    color: #4A148C;
+}
+
+#section3 {
+    background: linear-gradient(#FAFAFA 90%, #D7CCC8);
+}
+#section3 h2{
+    color: #4A148C;
+}
+#section3 p{
+    color: #4A148C;
+}
+
+#section4 {
+    background: #D7CCC8;
+}
+
+.chart-placeholder {
+    background: #eee;
+    height: 500px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 48px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+#section5 button {
+    font-family: DM Sans;
+    font-weight: 400;
+    background: #388E3C;
+    color: #FAFAFA;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 24px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#section5 button:hover {
+    background: #66BB6A;
+    color: #FAFAFA;
+}
+
+#calculator {
+    min-height: 100vh;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background: #4E342E;
+    color: #E0E0E0;
+    padding: 48px 48px;
+}
+
+footer a {
+    font-family: DM Sans;
+    font-weight: 300;
+    color: #E0E0E0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #D7CCC8;
+}

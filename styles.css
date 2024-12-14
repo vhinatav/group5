@@ -63,6 +63,7 @@ header, section, footer {
 #section1 {
     background: linear-gradient(#D7CCC8 90%, #FAFAFA);
     padding: 48px;
+    min-height: 600px;  /* Ensure the section is tall enough to fit the chart */
 }
 
 section h2 {

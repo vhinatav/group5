@@ -8,7 +8,7 @@ const margin = { top: 50, right: 100, bottom: 50, left: 60 },
     height = 500 - margin.top - margin.bottom;
 
 // Append the SVG object to the body of the page
-const svg = d3.select("body")
+const svg = d3.select("#section1")  // Target the section1 element
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -130,7 +130,7 @@ function animateLines() {
 const temperaturePath = svg.append("path")
     .datum(temperatureData)
     .attr("fill", "none")
-    .attr("stroke", "steelblue")
+    .attr("stroke", "grey")
     .attr("stroke-width", 1.5)
     .attr("d", lineTemperature);
 
@@ -138,7 +138,7 @@ const temperaturePath = svg.append("path")
 const co2Path = svg.append("path")
     .datum(co2Data)
     .attr("fill", "none")
-    .attr("stroke", "tomato")
+    .attr("stroke", "white")
     .attr("stroke-width", 1.5)
     .attr("d", lineCO2);
 
@@ -151,7 +151,7 @@ svg.selectAll(".temp-point")
     .attr("cx", d => x(d.year))
     .attr("cy", d => y1(d.value))
     .attr("r", 4)
-    .attr("fill", "steelblue")
+    .attr("fill", "grey")
     .on("mouseover", function(event, d) {
         tooltip.style("display", "block")
             .html(`Year: ${d.year}<br>Temp Anomaly: ${d.value.toFixed(2)}°C`)
@@ -169,7 +169,7 @@ svg.selectAll(".co2-point")
     .attr("cx", d => x(d.year))
     .attr("cy", d => y2(d.value))
     .attr("r", 4)
-    .attr("fill", "tomato")
+    .attr("fill", "white")
     .on("mouseover", function(event, d) {
         tooltip.style("display", "block")
             .html(`Year: ${d.year}<br>CO₂ Emissions: ${d.value.toFixed(2)} BMT`)
@@ -208,7 +208,7 @@ legend.append("rect")
     .attr("y", 0)
     .attr("width", 10)
     .attr("height", 10)
-    .attr("fill", "steelblue");
+    .attr("fill", "grey");
 
 legend.append("text")
     .attr("x", 20)
@@ -220,7 +220,7 @@ legend.append("rect")
     .attr("y", 20)
     .attr("width", 10)
     .attr("height", 10)
-    .attr("fill", "tomato");
+    .attr("fill", "white");
 
 legend.append("text")
     .attr("x", 20)

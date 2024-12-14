@@ -1,7 +1,3 @@
-// PREPARATION
-// 1: Add <script src="https://d3js.org/d3.v7.min.js"></script> to hmtl
-// 2: Add <script src="vis1.js"></script> to html
-
 // Set up the chart dimensions and margins
 const margin = { top: 24, right: 100, bottom: 72, left: 48 },
     width = 900 - margin.left - margin.right,

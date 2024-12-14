@@ -35,7 +35,7 @@ function renderChart() {
           color: { 
             field: "platform", 
             type: "nominal", 
-            scale: { range: ["#c5acf2", "#4d229c", "#9a6cf0"] },
+            scale: { range: ["#4A148C", "#4A148C", "#4A148C"] },
             legend: null // This removes the color guide
           }
         },

@@ -51,7 +51,7 @@ d3.csv('./files/FashionSales.csv').then(data => {
         encoding: {
             x: { field: "Year", type: "ordinal", axis: { labelAngle: 0 } },
             y: { field: "Revenue", type: "quantitative", title: "Revenue (billions)" },
-            color: { field: "Brand", type: "nominal", scale: { range: ["#e833a3", "#28b9c7"] } },
+            color: { field: "Brand", type: "nominal", scale: { range: ["#BA68C8", "#4A148C"] } },
             size: { field: "TextileWaste", type: "quantitative", title: "Textile Waste (million kg)", scale: { range: [10, 1000] } },
             tooltip: [
                 { field: "Year", type: "ordinal" },

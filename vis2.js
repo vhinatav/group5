@@ -7,6 +7,7 @@ function scrollToCalculator(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
 
+
 // FAST FASHION VIS
 
 // Function to get chart dimensions based on screen size

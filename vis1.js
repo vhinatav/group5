@@ -142,7 +142,7 @@ const co2Path = svg.append("path")
     .attr("stroke-width", 1.5)
     .attr("d", lineCO2);
 
-// Add temperature points
+// Add temperature points.
 svg.selectAll(".temp-point")
     .data(temperatureData)
     .enter()

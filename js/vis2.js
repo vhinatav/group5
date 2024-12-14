@@ -65,8 +65,8 @@ d3.csv('./data/vis2.csv').then(data => {
     };
 
     // Clear any existing chart and render the new one
-    document.getElementById('fast-fashion-sales').innerHTML = '';
-    vegaEmbed('#fast-fashion-sales', spec).catch(console.error);
+    document.getElementById('vis2').innerHTML = '';
+    vegaEmbed('#vis2', spec).catch(console.error);
 });
 
 

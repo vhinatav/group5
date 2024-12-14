@@ -51,7 +51,7 @@ function renderChart() {
         };
 
         // Render the chart in the specified div with id 'pie-chart'
-        vegaEmbed('#pie-chart', spec).catch(console.error);
+        vegaEmbed('#vis4', spec).catch(console.error);
     });
 }
 

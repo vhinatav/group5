@@ -44,8 +44,8 @@ function renderChart() {
       };
   
       // Clear any existing chart and render the new one
-      document.getElementById('bar-chart').innerHTML = '';
-      vegaEmbed('#bar-chart', spec).catch(console.error);
+      document.getElementById('vis3').innerHTML = '';
+      vegaEmbed('#vis3', spec).catch(console.error);
     });
   }
   

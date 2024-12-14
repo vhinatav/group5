@@ -59,8 +59,8 @@ function renderHeatmap() {
         };
 
         // Clear any existing chart and render the new one
-        document.getElementById('heatmap').innerHTML = '';
-        vegaEmbed('#heatmap', spec).catch(console.error);
+        document.getElementById('vis5').innerHTML = '';
+        vegaEmbed('#vis5', spec).catch(console.error);
     });
 }
 

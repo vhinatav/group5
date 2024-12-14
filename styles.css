@@ -9,7 +9,7 @@ body {
 
 header, section, footer {
     padding: 48px;
-    text-align: left;
+    text-align: center;
 }
 
 /* Hero Section */
@@ -79,7 +79,7 @@ section h2 {
 section p {
     color: #424242;
     margin-left: 24px;
-    max-width: 70%;
+    max-width: 100%;
 }
 
 #section2 {

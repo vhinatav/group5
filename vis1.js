@@ -3,7 +3,7 @@
 // 2: Add <script src="vis1.js"></script> to html
 
 // Set up the chart dimensions and margins
-const margin = { top: 50, right: 100, bottom: 50, left: 60 },
+const margin = { top: 24, right: 100, bottom: 72, left: 48 },
     width = 900 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 

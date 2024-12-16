@@ -23,7 +23,7 @@ function getChartDimensions() {
 function renderHeatmap() {
     const { width, height } = getChartDimensions(); // Get dimensions based on screen size
 
-    d3.csv('/data/vis5.csv').then(data => {
+    d3.csv('./data/vis5.csv').then(data => {
         // Define Vega-Lite spec for the heatmap
         const spec = {
             $schema: "https://vega.github.io/schema/vega-lite/v5.json",

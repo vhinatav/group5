@@ -27,7 +27,7 @@ function getChartDimensions() {
 function renderChart() {
     const { width, height } = getChartDimensions(); // Get the dimensions based on screen size
 
-    d3.csv('../../data/vis2.csv').then(data => {
+    d3.csv('../data/vis2.csv').then(data => {
         // Parse revenue and textile waste as numbers
         data.forEach(d => {
             d.Revenue = +d.Revenue;  // Ensure Revenue is a number

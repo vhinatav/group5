@@ -24,7 +24,7 @@ function getChartDimensions() {
     const { width, height } = getChartDimensions(); // Get the dimensions based on screen size
   
     // Load the data from the CSV file
-    d3.csv('../../data/vis6.csv').then(data => {
+    d3.csv('./data/vis6.csv').then(data => {
       // Parse the 'time' column as a number if necessary
       data.forEach(d => {
         d.time = +d.time; // Ensure time is a number

@@ -12,8 +12,8 @@ function getChartDimensions() {
       height = 400;
     } else {
       // For larger screens
-      width = 900;
-      height = 500;
+      width = 600;
+      height = 400;
     }
   
     return { width, height };

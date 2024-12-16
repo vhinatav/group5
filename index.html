@@ -10,6 +10,11 @@
     <link href='https://fonts.googleapis.com/css?family=Instrument Serif' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
+    <!-- AOS Library CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- AOS Library JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -25,42 +30,164 @@
     </header>
 
     <!-- Section 1 -->
-    <section id="section1">
+    <section id="section1" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
         <h2>The Growing Global Warming and <br> the Role of Greenhouse Gas Emissions</h2>
         <p>Global warming has become an increasingly urgent issue over the years, with its effects becoming more apparent through rising global temperatures, extreme weather events, and melting ice caps. The primary driver of this climate crisis is the increase in greenhouse gas emissions, particularly carbon dioxide (CO2), which trap heat in the Earth's atmosphere. As human activities such as burning fossil fuels for energy, deforestation, and industrial processes release ever greater amounts of CO2, the planet's natural balance is disrupted, accelerating climate change.<br>&nbsp;</p>
-        <script src="js/vis1.js"></script>
-
+        <div id="vis1">
+            <script src="js/vis1.js"></script>
+        </div>
         <h2>What Is Causing This Issue?</h2>
         <p>Among all the causes of CO2 emissions such as transport, manufacturing, and construction, the fashion industry is a significant but often overlooked contributor to global warming, responsible for up to 10% of global carbon dioxide emissions (more than international flights and shipping combined). This impact stems not only from the production processes but also from the rapid turnover of clothing in the fast fashion cycle. Microtrends, which encourage frequent consumption and disposal, mean that clothes are discarded quickly, contributing to massive amounts of textile waste. Globally, almost 87% of total fibre input is burned or ends up in a landfill where it takes centuries to break down. As textiles decompose, they release harmful greenhouse gases such as carbon dioxide and methane, further exacerbating the climate crisis. This highlights the urgent need for more sustainable practices within the fashion industry to curb its environmental footprint.<br>&nbsp;</p>
+        <div id="intro-img">
+            <img src="./img/textile-waste.jpg" alt="Textile Waste">
+        </div>
+        
     </section>
 
     <!-- Section 2 -->
-    <section id="section2">
+    <section id="section2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
         <h2>Fast Fashion as a Cause of Environmental Issue</h2>
         <p>Fast fashion brands like Shein and Zara have had a surge in sales over the years, driven by their ability to quickly adapt to changing trends and offer low-cost, high-volume clothing. However, this growth has come at a substantial environmental cost, particularly in the form of increased textile waste emissions. As consumer demand for affordable, trendy clothing continues to rise, these brands have scaled up production, often using materials and processes that are not sustainable. This has led to a massive accumulation of discarded garments, many of which end up in landfills or incinerators, contributing to pollution and greenhouse gas emissions.<br>&nbsp;</p>
-        <div id="vis2"></div>
-        <script src="js/vis2.js"></script>
+        <div id="brands-container">
+            <div class="brand">
+                <img src="./img/shein.png" alt="Shein logo" class="brand-img">
+            </div>
+            <div class="brand">
+                <img src="./img/zara.png" alt="Zara logo" class="brand-img1">
+            </div>
+        </div>
+        <div id="vis-container">
+            <div id="individual-container">
+                <div id="vis2"></div> <!-- Visualization 3 -->
+                <script src="js/vis2.js"></script>
+                <div class="vis-text">
+                    <p> This graph shows how the revune amount for Shein and 
+                        Zara has been on the rise since 2016. 
+                        Their success was followed by tremendous textile waste.
+                        If you hover over the circles, you will see the exact 
+                        revenue and the resulting textile waste for that year and brand.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
     </section>
 
     <!-- Section 3 -->
-    <section id="section3">
+    <section id="section3" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
         <h2>What is Driving the Increased <br> Consumption of Fast Fashion?</h2>
+        <div id="intro-img">
+            <img src="./img/influencer.png" alt="influencer">
+        </div>
         <p>The surge in fast fashion consumption can be attributed to several key factors, with social media playing a central role in fueling this trend. Social media platforms like Instagram, TikTok, and Pinterest have transformed the way people interact with fashion, making it easier than ever to stay on top of the latest trends. Through influencers, viral challenges, and targeted advertisements, these platforms create a sense of urgency and exclusivity around clothing, encouraging constant buying and outfit turnover. Influencers and fashion bloggers often promote new, affordable styles that are quickly embraced by their massive followings, making the pressure to stay fashionable even stronger. The visual nature of social media amplifies this desire, with users continuously exposed to curated outfits, styling tips, and "must-have" items. These images often lead to impulsive purchases, as individuals strive to keep up with the rapidly changing trends they see online. The ease of access to trendy items combined with the social validation of owning the latest looks has made fast fashion a driving force in today’s consumer culture. As social media continues to push these trends, the demand for cheap, disposable fashion only grows, further accelerating the environmental crisis caused by textile waste.<br>&nbsp;</p>
-        <div id="vis3"></div>
-        <script src="js/vis3.js"></script>
-        <div id="vis4"></div>
-        <script src="js/vis4.js"></script>
-        <div id="vis5"></div>
-        <script src="js/vis5.js"></script>
-        <div id="vis6"></div>
-        <script src="js/vis6.js"></script>
+        <div id="vis-container">
+            <div id="individual-container">
+                <div id="vis6"></div> <!-- Visualization 3 -->
+                <script src="js/vis6.js"></script>
+                <div class="vis-text">
+                    <p> It is interesting to see how the success 
+                        of Shein and Zara correlates with the average time 
+                        spend on social media world wide, since social media 
+                        use has also increased significally over the years.</p>
+                </div>
+            </div>
+            <div id="individual-container">
+                <div id="vis3"></div> <!-- Visualization 4 -->
+                <script src="js/vis3.js"></script>
+                <div class="vis-text">
+                    <p> By comparing the popularity of social media platforms, 
+                        we found that Instagam is among the top 3, 
+                        and it scores the highest in the average time spent.</p>
+                </div>
+            </div>
+        </div>
+        <div id="vis-container">
+            <div id="individual-container">
+                <div id="vis5"></div> <!-- Visualization 3 -->
+                <script src="js/vis5.js"></script>
+                <div class="vis-text">
+                    <p>We also wanted to analyze the influence on social media on the consumer's behavior, 
+                        in relation to the hours spent per day. We found that most social media based purchases 
+                        are home decore, followed by electronics beauty and fashion.
+                    </p>
+                </div>
+            </div>
+            <div id="individual-container">
+                <div id="vis4"></div> <!-- Visualization 4 -->
+                <script src="js/vis4.js"></script>
+                <div class="vis-text">
+                    <p> Looking closely at the relation of time used on social media and 
+                        its influence on fashion related purchased, it is clear that the more time used
+                         on social media, the higher the pressure on the customer to buy fashion products.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Section 4 -->
-    <section id="section4">
+    <!-- Section 5: Textile Waste and CO2 Calculator -->
+    <section id="section4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
+        <h2>Textile Waste & CO2 Emissions Calculator</h2>
+        <p>Enter the number of each clothing type to estimate the textile waste and CO2 emissions produced</p>
+    
+        <div id="calculator-container">
+            <!-- T-shirt input -->
+            <div class="clothing-type">
+                <img src="./img/top.png" alt="T-Shirt Logo" class="clothing-logo">
+                <label for="num-tshirt">Tops:</label>
+            </div>
+            <input type="number" id="num-tshirt" placeholder="Enter number of t-shirts" min="0">
+    
+            <!-- Jeans input -->
+            <div class="clothing-type">
+                <img src="./img/pants.png" alt="T-Shirt Logo" class="clothing-logo1">
+                <label for="num-jeans">Bottoms:</label>
+            </div>
+            <input type="number" id="num-jeans" placeholder="Enter number of jeans" min="0">
+    
+            <!-- Jackets input -->
+            <div class="clothing-type">
+                <img src="./img/jacket.png" alt="T-Shirt Logo" class="clothing-logo2">
+                <label for="num-jacket">Jackets:</label>
+            </div>
+            <input type="number" id="num-jacket" placeholder="Enter number of jackets" min="0">
+    
+            <!-- Undergarment input -->
+            <div class="clothing-type">
+                <img src="./img/underwear.png" alt="T-Shirt Logo" class="clothing-logo3">
+                <label for="num-undergarment">Undergarments:</label>
+            </div>
+            <input type="number" id="num-undergarment" placeholder="Enter number of undergarments" min="0">
+
+            <button id="calculate-button">Calculate</button>
+            <!--
+            T-shirts (0.5 kg waste, 10 kg CO2 per item)
+            Jeans (1 kg waste, 20 kg CO2 per item)
+            Jackets (0.8 kg waste, 15 kg CO2 per item)
+            Undergarment (0.3 kg waste, 5 kg CO2 per item)
+            -->
+
+            
+            <div id="result-container">
+                <p id="result-waste">Estimated Textile Waste: 0 kg</p>
+                <p id="result-co2">Estimated CO2 Emissions: 0 kg</p>
+            </div>
+            
+        </div>
+
+    </section>
+
+
+    
+
+    <!-- Section 5 -->
+    <section id="section5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
         <h2>Taking Action: <br> Solutions for Reducing Textile Waste</h2>
+
         <p>While textile waste is a growing problem, there are practical steps we can all take to make a difference. Start by being more mindful of what you buy. Choose high-quality, long-lasting clothes over fast fashion and consider buying second-hand or repurposing old garments. Recycling programs and clothing donations can help reduce waste, so look for opportunities to give clothes a second life.
             For businesses, adopting sustainable practices like using eco-friendly materials and promoting slow fashion can have a positive impact. Governments can also play a role by encouraging recycling initiatives and enforcing regulations to minimize waste. Small actions from individuals, brands, and governments can collectively make a big difference in tackling textile waste and protecting the environment.</p>
+        <div id="outro-img">
+            <img src="./img/recycle.jpeg" alt="recycle">
+        </div>
     </section>
 
     <!-- Section 5 -->
@@ -81,8 +208,17 @@
         <!-- <a href="#reference">Reference</a>
         <br>
         <a href="#process">Process</a> -->
+        <p>Github:</p>
+        <p>rababta</p>
+        <p>vhinatav</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="calculator.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>

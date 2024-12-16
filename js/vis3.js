@@ -1,3 +1,25 @@
+// Function to get chart dimensions based on screen size
+function getChartDimensions() {
+  let width, height;
+
+  if (window.matchMedia("(max-width: 600px)").matches) {
+      // For small screens (mobile)
+      width = 300;
+      height = 250;
+  } else if (window.matchMedia("(max-width: 1024px)").matches) {
+      // For medium screens (tablet)
+      width = 500;
+      height = 400;
+  } else {
+      // For large screens (desktop)
+      width = 600;
+      height = 400;
+  }
+
+  return { width, height };
+}
+
+
 // Function to create and render the bar chart
 function renderChart() {
     const { width, height } = getChartDimensions(); // Get the dimensions based on screen size
@@ -35,7 +57,7 @@ function renderChart() {
           color: { 
             field: "platform", 
             type: "nominal", 
-            scale: { range: ["#4A148C", "#4A148C", "#4A148C"] },
+            scale: { range: ["#4A148C"] },
             legend: null // This removes the color guide
           }
         },

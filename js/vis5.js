@@ -9,11 +9,11 @@ function getChartDimensions() {
     } else if (window.matchMedia("(max-width: 1024px)").matches) {
         // For medium screens (tablet)
         width = 500;
-        height = 400;
+        height = 300;
     } else {
         // For large screens (desktop)
-        width = 700;
-        height = 500;
+        width = 500;
+        height = 350;
     }
 
     return { width, height };
@@ -50,7 +50,7 @@ function renderHeatmap() {
                     title: "Social Media Usage (Hours/Day)",
                     scale: {
                         domain: [0, 100],  
-                        range: ["#a8f0dd", "#283d38"]
+                        range: ["#ccb8f2", "#4A148C"]
                     }
                 }
             },

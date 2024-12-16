@@ -56,12 +56,16 @@ header, section, footer {
     margin-top: 24px;
 }
 
-/* Section Styles */
+/* Section + vis Styles */
+
+
 #section1 {
     background: linear-gradient(#D7CCC8 90%, #FAFAFA);
     padding: 48px;
-    min-height: 600px;  /* Ensure the section is tall enough to fit the chart */
+
 }
+
+
 
 section h2 {
     font-family: Instrument Serif;
@@ -70,13 +74,18 @@ section h2 {
     line-height: 1;
     color: #424242;
     margin-left: 24px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
+
 
 section p {
     color: #424242;
-    margin-left: 24px;
-    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    max-width: 1000px;  /* Set a maximum width for the paragraphs */
+    padding: 0 24px;   /* Optional: Adds padding for extra space on small screens */
+    text-align: left;
 }
 
 #section2 {
@@ -99,8 +108,54 @@ section p {
     color: #4A148C;
 }
 
-#section4 {
+#vis-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;        
+    gap: 20px;                       
+    padding: 24px;
+}
+
+#individual-container {
+    display: flex;
+    flex-direction: column;    /* Stack visualization and text vertically */
+    align-items: center;       /* Center the content */
+    flex: 1;
+    margin: 0 auto;
+}
+
+.vis-text {
+    opacity: 0;             
+    background-color: #e0bce8;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px;
+    max-width: 90%;          
+    transition: opacity 0.7s ease, visibility 0.7s ease;  
+}
+
+#individual-container:hover .vis-text {
+    display: block;  
+    opacity: 1;  
+}
+
+.vis-text p {
+    color: black !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#vis3, #vis4, #vis5, #vis6 {
+    flex: 1;                                           
+}
+
+
+
+#section5 {
     background: #D7CCC8;
+    padding: 48px;
 }
 
 .chart-placeholder {
@@ -116,30 +171,199 @@ section p {
     color: #777;
 }
 
-#section5 button {
+
+
+/* calculator */
+
+
+
+#section4 {
+    background: #D7CCC8;
+}
+
+#section4 p{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+#calculator-container {
+    margin-top: 20px;
+    width: 100%;                  /* Set the width to 100% of the parent container */
+    max-width: 600px;              /* Set a maximum width for the calculator */
+    background-color: #F5F5F5;     /* Optional: Add a background color */
+    padding: 40px 10px 40px 10px;                 /* Add padding inside the container */
+    border-radius: 10px;           /* Round the corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;           /* Center content horizontally */
+    justify-content: center;       /* Center content vertically */
+    margin-left: auto;             /* Center the container horizontally */
+    margin-right: auto;
+}
+
+
+#calculator-container label {
+    display: block;
+    margin-bottom: 5px;
     font-family: DM Sans;
     font-weight: 400;
-    background: #388E3C;
-    color: #FAFAFA;
-    border: none;
-    padding: 15px 20px;
     font-size: 1em;
+    
+}
+
+#calculator-container input {
+    font-family: DM Sans;
+    font-weight: 400;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.clothing-type {
+    display: flex;
+    align-items: center;  
+    margin-bottom: 10px;  
+}
+
+.clothing-logo {
+    width: 30px;           
+    height: auto;          
+    margin-right: 10px;    
+}
+
+.clothing-logo1 {
+    width: 25px;           
+    height: auto;          
+    margin-right: 10px;    
+}
+
+.clothing-logo2 {
+    width: 50px;           
+    height: auto;          
+    margin-right: 10px;    
+}
+
+.clothing-logo3 {
+    width: 35px;           
+    height: auto;          
+    margin-right: 10px;    
+}
+
+#calculate-button {
+    font-family: DM Sans;
+    font-weight: 400;
+    background-color:#4A148C;
+    color: white;
     cursor: pointer;
-    margin-top: 20px;
-    margin-left: 24px;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#section5 button:hover {
-    background: #66BB6A;
-    color: #FAFAFA;
+#calculate-button:hover {
+    background-color:#e0bce8;
+    color: #424242;
+    
 }
 
-#calculator {
-    min-height: 100vh;
-    height: auto;
+#result-container {
+    margin-top: 40px;
+    width: 100%;                  /* Set the width to 100% of the parent container */
+    max-width: 400px;              /* Set a maximum width for the calculator */
+    background-color: #e0bce8;     /* Optional: Add a background color */
+    padding: 25px 0 25px 0;                 /* Add padding inside the container */
+    border-radius: 10px;           /* Round the corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;           /* Center content horizontally */
+    justify-content: center;       /* Center content vertically */
+    margin-left: auto;             /* Center the container horizontally */
+    margin-right: auto;
 }
+
+#result-waste, #result-co2 {
+    font-size: 1.2em;
+    color: black;
+}
+
+
+
+
+
+
+/* images */
+
+#intro-img {
+    width: 100%;                
+    display: flex;              
+    justify-content: center;    
+    align-items: center;       
+    padding: 20px;              
+    height: auto;               
+}
+
+#intro-img img {
+    max-width: 1050px;
+    width: 100%;                
+    height: auto;               
+    border-radius: 10px;        
+}
+
+
+#outro-img {
+    width: 100%;                
+    display: flex;              
+    justify-content: center;    
+    align-items: center;       
+    padding: 20px;              
+    height: auto;               
+}
+
+
+#outro-img img {
+    max-width: 800px;
+    width: 100%;                
+    height: auto;               
+    border-radius: 10px;        
+}
+
+#brands-container {
+    display: flex;                 
+    justify-content: center;       
+    align-items: center;           
+    gap: 20px;
+    margin-top: 20px;                     
+    margin-bottom: 20px;           
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;  /* Add a 2px solid border with a purple color */
+    padding: 10px;              /* Add padding to give space between the border and the image */
+    border-radius: 10px;
+}
+
+.brand-img {
+    max-width: 175px;              
+    height: auto;                 
+}
+
+.brand-img1 {
+    max-width: 150px;              
+    height: auto;                  
+}
+
 
 /* Footer */
 footer {
@@ -158,3 +382,152 @@ footer a {
 footer a:hover {
     color: #D7CCC8;
 }
+
+
+
+/* Media Queries */
+
+/* Responsive Design for smaller screens */
+@media (max-width: 1600px) {
+    #vis-container {
+        flex-direction: column;     /* Stacks charts vertically */
+        align-items: stretch;       /* Makes charts take full width */
+    }
+
+    #vis3, #vis4, #vis5, #vis6 {
+        min-width: 100%;            /* Make charts full width */
+        margin-bottom: 20px;        /* Adds space between the stacked charts */
+    }
+
+    .vis-text {
+        margin-top: 15px;   
+        margin-bottom: 15px; 
+    }
+
+    .intro-img img {
+        max-width: 700px;       /* Make the image even smaller on mobile */
+    }
+
+    .outtro-img img {
+        max-width: 600px;       /* Make the image even smaller on mobile */
+    }
+
+    .brand-img {
+        max-width: 155px;              
+        height: auto;                 
+    }
+    
+    .brand-img1 {
+        max-width: 130px;              
+        height: auto;                  
+    }
+}
+
+
+@media (max-width: 768px) {
+    #vis-container {
+        flex-direction: column;     /* Stacks charts vertically */
+        align-items: stretch;       /* Makes charts take full width */
+    }
+
+    #vis3, #vis4, #vis5, #vis6 {
+        min-width: 100%;            /* Make charts full width */
+        margin-bottom: 20px;        /* Adds space between the stacked charts */
+    }
+
+    .vis-text {
+        font-size: 0.85em;  
+        margin-top: 20px;   
+        margin-bottom: 20px; 
+        padding: 0 10px;     
+    }
+
+    .intro-img img {
+        max-width: 200px;       /* Make the image even smaller on mobile */
+    }
+
+    .outtro-img img {
+        max-width: 200px;       /* Make the image even smaller on mobile */
+    }
+
+    #brands-container {
+        flex-direction: column;    /* Stack logos vertically on smaller screens */
+        gap: 10px;                 /* Reduce gap between logos */
+    }
+
+    .brand-img1 {
+        max-width: 100px;          /* Smaller image size on mobile */
+    }
+
+    .brand-img {
+        max-width: 2000px;          /* Smaller image size on mobile */
+    }
+
+    .brand-img {
+        max-width: 100px;              
+        height: auto;                 
+    }
+    
+    .brand-img1 {
+        max-width: 100px;              
+        height: auto;                  
+    }
+
+}
+
+
+/* Media Queries for Calculator */
+
+/* Tablets and larger screens */
+@media (max-width: 768px) {
+    #calculator-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 1.1em;
+    }
+
+    input[type="number"] {
+        width: 70px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    #calculator-container {
+        width: 90%;    /* Allow the container to be smaller on mobile */
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .clothing-type {
+        flex-direction: column;   /* Stack label, logo, and input vertically */
+        align-items: flex-start;
+    }
+
+    .clothing-logo {
+        width: 30px;   /* Smaller logos */
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input[type="number"] {
+        width: 100%;   /* Full width for inputs on mobile */
+    }
+
+    button {
+        font-size: 1.1em;
+    }
+}
+

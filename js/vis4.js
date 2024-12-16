@@ -23,7 +23,7 @@ function getChartDimensions() {
 function renderChart() {
     const { width, height } = getChartDimensions(); // Get dimensions based on screen size
 
-    d3.csv('../../data/vis4.csv').then(data => {
+    d3.csv('./data/vis4.csv').then(data => {
         // Filter the data for 'Fashion' Product Category
         const filteredData = data.filter(d => d['Product Category'] === 'Fashion');
 

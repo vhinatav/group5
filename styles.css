@@ -277,16 +277,16 @@ section p {
 
 #result-container {
     margin-top: 40px;
-    width: 100%;                  /* Set the width to 100% of the parent container */
-    max-width: 400px;              /* Set a maximum width for the calculator */
-    background-color: #e0bce8;     /* Optional: Add a background color */
-    padding: 25px 0 25px 0;                 /* Add padding inside the container */
-    border-radius: 10px;           /* Round the corners */
+    width: 100%;                  
+    max-width: 400px;              
+    background-color: #e0bce8;     
+    padding: 25px 0 25px 0;                 
+    border-radius: 10px;           
     display: flex;
     flex-direction: column;
-    align-items: center;           /* Center content horizontally */
-    justify-content: center;       /* Center content vertically */
-    margin-left: auto;             /* Center the container horizontally */
+    align-items: center;           
+    justify-content: center;       
+    margin-left: auto;             
     margin-right: auto;
 }
 
@@ -295,8 +295,29 @@ section p {
     color: black;
 }
 
+#tree-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#tree-section p {
+    font-size: 1.2em;
+    color: black;
+}
+
+#tree-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
 
+
+.tree-img {
+    width: 50px;  
+    height: auto;
+}
 
 
 

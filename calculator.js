@@ -36,4 +36,32 @@ document.getElementById('calculate-button').addEventListener('click', function()
     // Display the results
     document.getElementById('result-waste').textContent = `Estimated Textile Waste: ${totalWaste.toFixed(2)} kg`;
     document.getElementById('result-co2').textContent = `Estimated CO2 Emissions: ${totalCO2.toFixed(2)} kg`;
+
+    // Call the function to update the tree images
+    updateTreesAffected(totalCO2);
 });
+
+function updateTreesAffected(emissions) {
+    const treesPerTonCO2 = 10; // Assume 1 ton of CO2 results in 10 trees being affected
+    const numberOfTrees = Math.floor(emissions / 1000 * treesPerTonCO2);  // Calculate trees based on emissions (convert kg to tons)
+    const treeContainer = document.getElementById('tree-container');
+    
+    // Clear any previous tree images
+    treeContainer.innerHTML = '';
+
+    // Add tree images based on the number of trees affected
+    for (let i = 0; i < numberOfTrees; i++) {
+        const treeImg = document.createElement('img');
+        treeImg.src = './img/tree.png';  // Path to your tree image
+        treeImg.alt = 'Tree';
+        treeImg.classList.add('tree-img');
+        treeContainer.appendChild(treeImg);
+    }
+
+    // If no trees affected, show a message
+    if (numberOfTrees === 0) {
+        const noTreesMsg = document.createElement('p');
+        noTreesMsg.textContent = 'No trees affected for this level of emissions.';
+        treeContainer.appendChild(noTreesMsg);
+    }
+}

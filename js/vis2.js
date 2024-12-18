@@ -39,19 +39,42 @@ function renderChart() {
             $schema: "https://vega.github.io/schema/vega-lite/v5.json",
             description: "Fashion Sales vs Textile Waste",
             data: { values: data },  // Use the loaded data
-            mark: "circle",
-            encoding: {
-                x: { field: "Year", type: "ordinal", axis: { labelAngle: 0 } },
-                y: { field: "Revenue", type: "quantitative", title: "Revenue (billions)" },
-                color: { field: "Brand", type: "nominal", scale: { range: ["#BA68C8", "#4A148C"] } },
-                size: { field: "TextileWaste", type: "quantitative", title: "Textile Waste (million kg)", scale: { range: [10, 1000] } },
-                tooltip: [
-                    { field: "Year", type: "ordinal" },
-                    { field: "Brand", type: "nominal" },
-                    { field: "Revenue", type: "quantitative", title: "Revenue (billions)" },
-                    { field: "TextileWaste", type: "quantitative", title: "Textile Waste (million kg)" }
-                ]
-            },
+            layer: [
+
+                {
+                    mark: "circle",  // Keep the circles as markers for each data point
+                    encoding: {
+                        x: { field: "Year", type: "ordinal" },
+                        y: { field: "Revenue", type: "quantitative" },
+                        color: { field: "Brand", type: "nominal", scale: { range: ["#BA68C8", "#4A148C"] } },
+                        size: { field: "TextileWaste", type: "quantitative", title: "Textile Waste (million kg)", scale: { range: [10, 1000] } },
+                        fill: { field: "Brand", type: "nominal", scale: { range: ["#BA68C8", "#4A148C"] } }, 
+                        fillOpacity: { value: 1 },
+                        
+                        tooltip: [
+                            { field: "Year", type: "ordinal" },
+                            { field: "Brand", type: "nominal" },
+                            { field: "Revenue", type: "quantitative", title: "Revenue (billions)" },
+                            { field: "TextileWaste", type: "quantitative", title: "Textile Waste (million kg)" }
+                        ]
+                    }
+                },
+                {
+                    mark: "line",  // Create lines connecting the points
+                    encoding: {
+                        x: { field: "Year", type: "ordinal", axis: { labelAngle: 0 } },
+                        y: { field: "Revenue", type: "quantitative", title: "Revenue (billions)" },
+                        color: { 
+                            field: "Brand", 
+                            type: "nominal", 
+                            scale: { range: ["#BA68C8", "#4A148C"] },
+                            legend: null  // Disable the legend for the line
+                        },
+                        opacity: { value: 0.4 }
+                    }
+                }
+
+            ],
             width: width,  
             height: height,
         };

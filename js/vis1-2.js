@@ -1,4 +1,4 @@
-// Function to get chart dimensions based on screen size
+
 function getChartDimensions() {
     let width, height;
   

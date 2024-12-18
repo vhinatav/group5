@@ -53,7 +53,7 @@ function updateTreesAffected(emissions) {
     for (let i = 0; i < numberOfTrees; i++) {
         const treeImg = document.createElement('img');
         treeImg.src = './img/tree.PNG';  // Path to your tree image
-        treeImg.alt = 'Tree';
+        treeImg.alt = 'tree';
         treeImg.classList.add('tree-img');
         treeContainer.appendChild(treeImg);
     }
